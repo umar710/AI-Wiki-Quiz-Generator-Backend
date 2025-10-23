@@ -49,7 +49,7 @@ DATABASE_URL=sqlite:///./quiz_history.db
 uvicorn main:app --reload
 ```
 
-Visit → [http://localhost:8000/docs](http://localhost:8000/docs)
+Visit → [http://localhost:8000/](http://localhost:8000/)
 
 ## 🚀 Deploy on Render
 
@@ -84,5 +84,6 @@ curl -X POST "https://your-backend.onrender.com/generate_quiz" \
 ---
 
 **🧩 Backend Live Demo:** [https://ai-wiki-quiz-generator-backend.onrender.com]
+
 **💻 Frontend Repo:** [https://ai-wiki-quiz-generator-frontend.vercel.app/]
 
