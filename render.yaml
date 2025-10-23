@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: ai-quiz-generator-backend
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: ai_quiz_database # This must match your database name in Render
+          property: connectionString
+      - key: GEMINI_API_KEY
+        value: your_actual_gemini_api_key_here
